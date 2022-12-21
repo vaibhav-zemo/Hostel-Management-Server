@@ -1,0 +1,49 @@
+{
+  "name": "hostel-management",
+  "version": "1.0.0",
+  "description": "Login Portal",
+  "main": "server.js",
+  "scripts": {
+    "test": "jest __tests__ --forceExit",
+    "test:watch": "jest --watchAll --forceExit",
+    "client-install": "npm install --prefix client",
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sahuyuvraj/Hostel-Management.git"
+  },
+  "author": "Yuvraj Sahu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sahuyuvraj/Hostel-Management/issues"
+  },
+  "homepage": "https://github.com/sahuyuvraj/Hostel-Management#readme",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.0",
+    "concurrently": "^5.3.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.1",
+    "express-http-proxy": "^1.6.3",
+    "gravatar": "^1.8.2",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.13.14",
+    "passport": "^0.4.1",
+    "passport-jwt": "^4.0.0",
+    "react-dom": "^18.2.0",
+    "react-redux": "^8.0.2",
+    "validator": "^12.1.0"
+  },
+  "devDependencies": {
+    "jest": "^26.6.1",
+    "nodemon": "^1.19.4",
+    "supertest": "^6.0.0"
+  }
+}
